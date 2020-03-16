@@ -1,0 +1,1414 @@
+<html>
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Answers!</title>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/comfortaa-bold" type="text/css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<link rel="stylesheet" href="Answers.css">
+<script src="Answers.js"></script>
+
+</head>
+
+
+<body>
+
+<div id="body">
+
+<div id="snackBar"></div>
+
+<div id="example" class="container Light">
+
+<i class="fa fa-times remove grid-element"></i>
+
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('new').innerText)">
+
+<u class="solid">New Comment</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="new" contenteditable="true">New Text here.</span>
+
+
+</div>
+<div class="buttons-container">
+	
+	<div id="buttons" class="grid-container">
+	
+		<div class="heading" id="sButton"><i class="fas fa-clipboard"></i></div>
+	
+		<div class="heading" id="bButton"><i class="fas fa-gift"></i></div>
+	
+		<div class="heading" id="eButton"><i class="fas fa-at"></i></div>
+
+		<div class="heading" id="tButton"><i class="fas fa-language"></i></div>
+	
+		<div class="heading" id="fButton"><i class="fas fa-money-check-alt"></i></div>
+	
+	</div>
+</div>
+
+<div id="blank"></div>
+
+
+
+<!-----------------------------Status--------------------------------->
+
+
+<div class="messages" id="sMessages">
+
+<!-- <div class="add"><i class="fa fa-times"></i>New Comment</div> -->
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('welcomen').innerText)">
+<u class="color grid-element">Welcome Message</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="welcomen" contenteditable="true"></span>
+
+
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('checking').innerText)">
+<u class="solid">Let me check</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="checking" contenteditable="true">Few moments, Let me check your account, please :)</span>
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('pVerification').innerText)">
+<u class="color">Phone verification</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="pVerification" contenteditable="true">Please use the code inside the SMS message we sent you, and add it to "my account" - SMS verification field.</span>
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('eVerification').innerText)">
+<u class="solid">Email Verification</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="eVerification" contenteditable="true">Please follow the link inside the email we sent you to verify the email address or please enter the code from the email to the email verification field inside your account.</span>
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid"> 
+<!-- When a player ask to close his account -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" class="header" onclick="copyToClip(document.getElementById('thirdPT').innerText)">
+<u class="color">3rd Party bonus</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="thirdPT" contenteditable="true">When you register from a third party link (advertising company, blog, facebook) your account conditions may change due to different agreement with those companies.<br>
+When your account conditions change the welcome bonus changes as well.<br>
+The bonus at your account is registered as..</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid"> 
+<!-- When a player ask to close his account -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" class="header" onclick="copyToClip(document.getElementById('cEmail').innerText)"><u class="solid">Change email notification</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="cEmail" contenteditable="true">It is important to know - when I change an email address the user must reset his password via the "forgot password" method at the login section in order to be able to log in again.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- when user provide a non existing email in the database -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('email').innerText)"><u class="color">Email not found </u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="email" contenteditable="true">It seems that I cannot find your account, the email you have provided is not in our database.
+can you please send me the correct email address?
+I need a fully functioning email address in order to help you.
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When a user have solved his own problem -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('handled').innerText)"><u class="solid">When User handled </u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="handled" contenteditable="true">I can see that you have already handled the situation by your self!<br>
+If you need any Further assistance with any issue, request or matter please don't hesitate to contact me via chat! or mail!</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- VIP 3+ Bonus request -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('vip3+').innerText)"><u class="color">Contact AM </u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="vip3+" contenteditable="true">Please contact your account manager at"Chris@uniquecasino.com" in order to..</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('re-opening').innerText)">
+<u class="solid">Reopening request</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="re-opening" contenteditable="true">
+To reopen your account, we kindly ask you to answer and confirm the following questions,
+Please, answer them on a piece of paper and add a date and a signature before taking a photo od the document and sending it by email :)
+The questions:
+1. Do you have your gaming activities under full control?
+2. Do you currently have any financial difficulties?
+3. You are aware that you may lose money while gambling and, you take full responsibility for your actions.
+4. You are canceling your request to close the account.
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('setLimits1').innerText)">
+<u class="color grid-element">Setting Limits 1</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="setLimits1" contenteditable="true">Would you like to set limits on your deposits? This is a popular procedure at our casino, as soon as we offer limits the players grab this opportunity as it gives them a lot of benefits! 
+- They do not need to worry anymore about their deposits, they are in good hands :)
+- The players feel more confident about playing at our casino, they trust us! 
+- They do not stop doing the thing they love while having an "insurance" from the casino. 
+So if this is also something you can consider then give it a try and you will not be disappointed! :D</span>
+
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid"> 
+<!-- When a player ask to close his account -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" class="header" onclick="copyToClip(document.getElementById('close').innerText)"><u class="solid">Account Closure</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="close" contenteditable="true">I would love to help you with your request but I am afraid I cannot as I am not authorized to close your account.
+Please provide an email to your account manager at "Chris@uniquecasino.com".
+<br>Please state the reason for closure at the email message or else the account closure process will not be completed.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('setLimits2').innerText)">
+<u class="color grid-element">Setting Limits 2</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="setLimits2" contenteditable="true">Would you like to set limits on your deposits? This is a popular procedure at our casino, as soon as we offer limits the players grab this opportunity as it gives them a lot of benefits! 
+- You do not need to worry anymore about checking your bank account every 5 minutes (been there myself, not fun).
+- You can focus on the true nature of gambling, which is to have fun! Gambling should be fun, not stressful, and we know it! 
+- You will be able to increase the limits or reduce the limits by your likings via the Chat, Phone, Emails! (everything to ensure comfort!).
+If setting limits is something you might be interested in, please reply to my email, and we will set those limits together! </span>
+
+
+
+<!--End Of Comments for this section-------------------------------------------------------------->
+<div class="bottom"></div>
+</div>
+</div>
+
+
+
+<!-----------------------------Bonus------------------------------------>
+
+
+
+<div class="messages" id="bMessages">
+
+<!-- <div class="add"><i class="fa fa-times"></i>New Comment</div> -->
+
+<div id="bonuses"> <!-- Bonuses -->
+
+
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('tVerification').innerText)">
+<u class="solid">For bonuses need verification</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="tVerification" contenteditable="true">In order to receive free bonuses in our casino, it is necessary to verify your email address and phone number.</span>
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user ask for Free Spins and never deposited and don't have an affiliate bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('used').innerText)"><u class="color">Used Bonuses</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="used" contenteditable="true">The system shows me that you have used your bonus on XX.XX.XXXX, when you register from a third party link (advertising company, blog, facebook) your account conditions may change due to different agreement with those companies.<br>
+When your account conditions change the welcome bonus changes as well.<br>
+Your free spins are assigned as registration bonus instead of the classic first deposit bonus.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user ask for Free Spins and never deposited and don't have an affiliate bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('nBonus').innerText)"><u class="solid">Need more deposits</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="nBonus" contenteditable="true">Thank you for your patience.<br>
+I will be able to add a big Match bonus but not a free bonus for the moment, would you like to enjoy a 50% deposit bonus?
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user ask for Free Spins and never deposited and don't have an affiliate bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('mFS').innerText)"><u class="color">Machance Registration Bonus</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="mFS" contenteditable="true">We offer you the following bonuses:
+<br>For your 1st deposit, we offer you a 100% bonus up to 200€ Or the 300% on a deposit of 20€ which will add 60€ EXTRA.
+<br>The 20 free spins will be granted right after your 1st deposit.
+<br>Do not forget you can play the bonus wheel which issues you a new bonus every Monday.
+<br>So for example, if you deposit 100€ you will receive 100€ bonus and 20 free spins + weekly wheel bonus!</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user ask for Free Spins and never deposited and don't have an affiliate bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('vWelcome').innerText)"><u class="solid">Vegas Registration Bonus</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="vWelcome" contenteditable="true">We offer you the following bonuses:
+For your 1st deposit, we offer you a 100% bonus for a deposit of up to 250€. (deposit 10€ receive another 10€)
+For your 2nd deposit, we offer a 50% bonus for a deposit of up to 500€. (deposit 10€ receive another 5€)
+After the 1st deposit, you will receive 10 free spins daily for 5 days straight!
+We offer the Raffle bonus, which will give you a chance of winning 5,000€ each Sunday!
+The first ticket is added to your account automatically. You may claim a raffle ticket every day (up to a total of 7 tickets) to increase your chances of winning the raffle. 
+Players ranking VIP Chrome and higher will enjoy frequent free spins to try out freshly added games.
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user ask for Free Spins and never deposited and don't have an affiliate bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('uFS').innerText)"><u class="color">Unique Registration Bonus</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="uFS" contenteditable="true">We offer you the following bonuses:
+<br>For your 1st deposit, we offer you a 100% bonus up to 200€.
+<br>The 20 free spins will be granted right after your 1st deposit.
+<br>Do not forget you can play the bonus wheel which issues you a new bonus every Monday.
+<br>So for example, if you deposit 100€ you will receive 100€ bonus and 20 free spins + weekly wheel bonus!</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When a user ask about where to find the bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('desktopLocation').innerText)" ><u class="solid">Desktop Bonus Location</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="desktopLocation" contenteditable="true">At the top of the website there is a "My Account" menu -click on it and you will see a new window named "Status" - at this window scroll down till you see the "Available bonuses" section - at this section click on the "claim" next to the desired bonus.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When a user ask about where to find the bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('mobileLocation').innerText)" ><u class="color">Mobile Bonus Location</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="mobileLocation" contenteditable="true">At the top of the website there are three little white stripes div after you click it, click the "My Account" menu - then you will see the "Status" menu - at this window scroll down till you see the "Available bonuses" section - at this section click on the "claim" next to the desired bonus.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When there is no bonus for the moment / user did not deposited enough yet -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('noBon').innerText)" ><u class="solid">No Bonus Available</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+
+
+<span id="noBon" contenteditable="true">After requesting a bonus from the system, it rejected my request.<br>
+That being said, you can try to check with an account manager if they have a bonus for you.<br>
+You can contact Chris (Account manager) via Chris@uniquecasion.com.
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user canceled his bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('cancel').innerText)"><u class="color">Canceled Bonus </u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="cancel" contenteditable="true">you have canceled your bonus manually.
+<br>The bonuses at the casino work in this order, you take one you use it and then take the other one.
+<br>If you take one when you have another already at your account the "old" bonus will be canceled.
+<br>I can grant you a new bonus and I will note that the user was warned about the bonuses and we will not be able to help you next time.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When user canceled his bonus -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('cashback').innerText)" ><u class="solid">Cashback Bonus </u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="cashback" contenteditable="true">The Cashback bonus can be asked once a day and granted only once a week. 
+<br>The cashback bonus is up to 25 so, it will not always be 25.
+<br>It is granted automatically by the system when it see's you as eligible for the bonus.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- Bonus granted. -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('granted').innerText)" ><u class="color">Bonus Granted</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="granted" contenteditable="true">I have granted you a bonus of XXX, Please claim it from the bonuses section.
+Also, I have added a deposit bonus of XXX%, Please do not forget to claim it before your next deposit from the bonuses section as well. :)</span>
+</div>
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('depGranted').innerText)" ><u class="solid">Deposit Bonus (Only) Granted</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="depGranted" contenteditable="true">I have added a deposit bonus of XXX%, Please do not forget to claim it before your next deposit from the bonuses section as well. :)</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" >
+
+<u class="color" onclick="copyToClip(document.getElementById('noFS').innerText)">No welcome free bonus explanation</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="noFS" contenteditable="true">I am afraid not, as we do not offer free bonuses for registration as we have the demo mode to try out the games at our casino.</span>
+</div>
+
+<div class="bottom"></div>
+</div>
+</div>
+
+
+<!--End Of Comments for this section-------------------------------------------------------------->
+</div>
+
+
+
+
+
+<!-----------------------------Emails--------------------------------->
+
+
+
+
+
+
+<div class="messages" id="eMessages">
+	
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('cleanEmail').innerText)">
+<u class="color grid-element">Email Format</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="cleanEmail" contenteditable="true">Hello Player,<br>
+<br>
+Thank you for your email and for bringing this to our attention. <br>
+I'd like to.... <br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('availableBonus').innerText)">
+<u class="solid grid-element">Welcome Email</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="availableBonus" contenteditable="true">Hello Player,<br>
+<br>
+Saw that you were checking out our casino, and wanted to give you a quick call and hear about your experience. I thought it would be helpful to quickly speak and learn a bit more about you and what are your expectations of our service.<br>
+<br>
+Most of our successful users will have a quick set up like this to get things started in the right direction.<br>
+<br>
+Is there a good time for you today or the next few days?<br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('declineEmail').innerText)">
+<u class="color grid-element">Declined Payment</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="declineEmail" contenteditable="true">Hello Player,<br>
+<br>
+How are you today?<br>
+I have tried to call you a few times today, and unfortunately, I couldn't reach you.<br>
+I can see you struggle to deposit, and I would like to help you with this.<br>
+Can you share with me, what's the reason for those declines?<br>
+Is it a technical issue or something that's above our casino payment system, maybe?<br>
+A quick reply from you will make things go very fast! :)<br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('haveBonus').innerText)">
+<u class="solid grid-element">Notification about a Bonus</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="haveBonus" contenteditable="true">Hello Player,<br>
+<br>
+How are you today?<br>
+I have tried to call you a few times today, and unfortunately, I couldn't reach you.<br>
+I would like you to remind you about the available bonuses that await you at the bonuses section! :D<br>
+Those bonuses are completely free and it is a shame to miss such an amazing opportunity to win your money back!<br>
+All you need to do is to Log in -> open the Status page -> Scroll down to bonuses, and claim each free bonus individually.<br>
+Please do not claim more than 1 bonus at a time as they will cancel each other, claim one and use it before claiming the other one! :D<br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('inc-reg').innerText)">
+<u class="color grid-element">Incomplete-Reg</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="inc-reg" contenteditable="true">Hello and welcome to our casino!,<br>
+<br>
+Thank you for choosing our casino as your new home!<br>
+I see there was an issue with your registration process, could I do something to help you?<br>
+I will be waiting to hear from you to solve this situation as quickly as possible :)<br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.</span>
+
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('free50').innerText)">
+<u class="solid grid-element">Vegas 50 Free spins</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="free50" contenteditable="true">Hello Player,<br>
+<br>
+How are you today? 
+I have tried to call you a few times today, and unfortunately, I couldn't reach you.
+I would like you to know that you have 50 FREE SPINS available for you! 
+This bonus will be added for a total of 5 days and if you miss even one day you will lose the spins!
+All you have to do is to come to the chat and ask for them! :)
+Ask the agent at the chat system to call you and verify your account, and you will be able to take the free bonus!
+It's a shame to waste such a fantastic bonus.
+It's a limited offer. Don't miss it!!<br>
+<br>
+Best regards,<br>
+Robert<br>
+VegasPlus casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('welcomeMail').innerText)">
+<u class="color grid-element">Newbies Email</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="welcomeMail" contenteditable="true">Hello Player,<br>
+<br>
+I'll keep this short and sweet to make the 26 seconds it takes to read this worth your time (yes, I timed it.)<br>
+<br>
+As a support agent at the casino, I get the ability to add people's special bonuses.<br>
+Could we schedule a 30 to 60 seconds call to discuss your bonuses, I promise! you will not be disappointed!<br>
+Even if you decide not to continue the conversation after our call, you'll leave with some advice about the casino that will make an immediate impact on your progress.<br>
+<br>
+Best regards<br>
+Robert,<br>
+Name casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('firstClosing').innerText)">
+<u class="solid grid-element">Closing Email (Email reply)</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="firstClosing" contenteditable="true">Hello Player,<br>
+<br>
+Thank you for your email and for bringing this to our attention. I am sorry to hear you leaving the casino.<br>
+Could you please let me know what specific issues you've encountered? I'd love to help where I can and pass along your suggestions to our team, but I need just a bit more information before doing so.<br>
+<br>
+I understand how it can be frustrating playing while not meeting your expectations, so hopefully, we can get this sorted out for you.
+I'll be happy to show you how vital customer satisfaction is for us.<br>
+<br>
+Waiting for a reply,<br>
+Robert,<br>
+Name Casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('forcedClosingEmail').innerText)">
+<u class="color grid-element">Closure (forced call)</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="forcedClosingEmail" contenteditable="true">Hello Player,<br>
+<br>
+Thank you for your email and for bringing this to our attention. I am sorry to hear you leaving the casino.<br>
+I'd love to show you how good I am in solving problems and answering any questions, but I need to do it on the phone because it is a Closure request.<br>
+Please send me your active hours, and I will call you as soon as possible.<br>
+<br>
+I understand how it can be frustrating playing while not meeting your expectations, so hopefully, we can get this sorted out for you.<br>
+I'll be happy to show you how vital customer satisfaction is for us.<br>
+<br>
+Waiting for a reply,<br>
+Robert,<br>
+Name Casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('askingClosingEmail').innerText)">
+<u class="solid grid-element">Closure (Asking phone)</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="askingClosingEmail" contenteditable="true">Hello Player,<br>
+<br>
+Thank you for your email and for bringing this to our attention. I am sorry to hear you leaving the casino.<br>
+I'd love to help where I can and pass along your suggestions to our team, but I need just a bit more information before doing so.<br>
+I would love to call you and solve your problem quickly and efficiently, speaking on the phone will save time, and it will be more personal and fun for both of us without wasting any extra minute, could you tell me please when I can call you? And can you send me your active hours?
+I will call you as soon as possible.
+<br>
+I understand how it can be frustrating playing while not meeting your expectations, so hopefully, we can get this sorted out for you.
+I'll be happy to show you how vital customer satisfaction is for us.<br>
+<br>
+Waiting for a reply,<br>
+Robert,<br>
+Name Casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('closingNotification').innerText)">
+<u class="color grid-element">Closure notification</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="closingNotification" contenteditable="true">Hello Player,<br>
+<br>
+We respect your decision, and your account is now closed.<br>
+Remember, if you'll ever change your mind and give us a second chance, come to the chat or send us an email.<br>
+I will gladly re-enable your free bonuses to give you a "fresh" start at the casino.<br>
+I wish you all the best on your new journey.<br>
+<br>
+Best Regards,<br>
+Robert,<br>
+VegasPlus Casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('notUseBonus').innerText)">
+<u class="solid grid-element">Don't use bonuses</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="notUseBonus" contenteditable="true">Hello player,<br>
+<br>
+How are you today?<br>
+Hopefully, everything is okay.<br>
+I am emailing you as I was going over my list of the players which eligible for a FREE BONUS, and I found that you are one of them.<br>
+I really want to add the Free bonus but the problem is that you set your account as "Do not use bonuses".<br>
+It's very important for me to at least notify you about the bonus as it is yours, you played enough here to earn it and I want you to enjoy it!<br>
+<br>
+Best regards,<br>
+Robert<br>
+Name casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('midActive').innerText)">
+<u class="color grid-element">Mid-Active email</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="midActive" contenteditable="true">Hello Player,<br>
+<br>
+We haven’t seen you in a while. Is everything okay? We want to be sure our content meets your needs.<br>
+In case you have concerns, you can reply to this email, and I will do my best to solve any problem, conquer any obstacle, and answer any question.<br>
+Also, I would like to discuss your bonuses as I see you eligible for a few of them.<br>
+You can also contact our customer support via the chat system with any questions, and they will do their best to answer them!<br>
+<br>
+Best Regards,<br>
+Robert,<br>
+Name Casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('reopeningEmail').innerText)">
+<u class="solid grid-element">Reopening Email</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="reopeningEmail" contenteditable="true">Hello player,<br>
+<br>
+It's been a while,<br>
+I am sending you this email (Robert) as I want to show you our improvements and our achievements at the time you were gone.<br>
+Many players know that we improve daily, and they wait for those changes reminding us every day how important it is for them.<br>
+I would love to give you a new experience at the casino and start from blank; I will personally accompany you in your new journey solving any issue and any request in the best way I can.<br>
+So, what how it's going to be? will you visit us once more to check our improvements?<br>
+<br>
+Waiting for your reply,<br>
+Robert<br>
+Name casino.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('midActive2nd').innerText)">
+<u class="color grid-element">Mid-Active email 2nd</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="midActive2nd" contenteditable="true">Hello Player,<br>
+<br>
+It's been a while, and I would like to tell you that I have something very, very special for you.<br>
+I would love to speak with you about it on the phone, talking on the phone will save time, and it will be more personal and fun for both of us without wasting any extra minute, could you tell me please when I can call you? And can you send me your active hours?<br>
+I will call you as soon as possible.<br>
+If you see me delaying for too long, please come to the chat system and ask for Robert, the agents will notify me about it, and I will call you instantly.<br>
+<br>
+Best Regards,<br>
+Robert,<br>
+Name Casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('newbie2nd').innerText)">
+<u class="solid grid-element">Newbie No.2</u>
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="newbie2nd" contenteditable="true">Hello player,<br>
+<br>
+Leaving the casino without using all our offers? Not so fast!<br>
+I have a few more offers for you, and I am sure you will not be disappointed! <br>
+Could we schedule a 1 to 2-minute call to discuss your bonuses?<br>
+Even if you decide not to continue the conversation after our call, you'll leave with some advice about the casino that will make an immediate impact on your progress.
+<br>
+If you see that I am delaying too much, please come to the chat system and ask for Robert, I will call instantly! <br>
+<br>
+Waiting for your reply,<br>
+Robert<br>
+Name casino.<br>
++61 2 8317 1220 , +61 2 9056 7531.<br>
+<br>
+P.S. Please save my number as "Robert :)" (with a smiley face) so you know who is calling and what news I bring.</span>
+</div>
+
+
+<!--End Of Comments for this section-------------------------------------------------------------->
+</div>
+
+
+
+
+<!-----------------------------Translate------------------------------------>
+
+
+
+<div class="messages" id="tMessages">
+<!--<div class="add"><i class="fa fa-times"></i>New Comment</div>  -->
+<div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- Closure German -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('gerClose').innerText)" >
+ 
+<u class="solid">Closure german</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="gerClose" contenteditable="true">Please provide an email to the german support team at "kundenservice@uniquecasino.com".
+Please state the reason of closure at the email message or else the account closure process will not be completed.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('onlyeng').innerText)" >
+<u class="color">Translate German (can try with google translate)</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="onlyeng" contenteditable="true">Hallo, mein Name ist Robert und ich bin ein englischer Kundendienstmitarbeiter.<br>
+Wenn Sie zu meinem Chat gekommen sind, bedeutet dies, dass es momentan keinen deutschsprachigen Support-Mitarbeiter gibt.<br>
+Ich kann Google Translate verwenden, um Ihnen zu helfen, wenn Sie möchten.</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('gt').innerText)" >
+<u class="solid">Translate German (only english agent)</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="gt" contenteditable="true">Hallo, mein Name ist Robert, ich bin ein englisch sprechender Unterstützer.
+<br>Ich kann dir nur auf Englisch helfen, oder du kannst auf einen deutschen Support-Agenten warten, der in wenigen Stunden kommt.
+<br>Danke für dein Verständnis. (übersetzt mit Google Translate)</span>
+</div>
+</div>
+
+<!--End Of Comments for this section-------------------------------------------------------------->
+<div class="bottom"></div>
+</div>
+
+
+
+<!-----------------------------Finance------------------------------------>
+
+
+
+<div class="messages" id="fMessages">
+<!--<div class="add"><i class="fa fa-times"></i>New Comment</div>
+<div>  -->
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('wVerification').innerText)">
+<u class="color">WD need verification</u>
+
+</h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="wVerification" contenteditable="true">In order to successfully withdraw from our casino, it is necessary to verify your email address and phone number.</span>
+</div>
+
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('finAproval').innerText)" >
+<u class="solid">Financial Approval</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="finAproval" contenteditable="true">I am afraid I have no permission to approve documents.<br>
+Our financial department will check your documents up to 48 working hours.<br>
+Please be patient and everything will be done as soon as possible :)</span>
+
+</div>
+
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('correctDoc').innerText)" >
+<u class="color">Correct Document</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="correctDoc" contenteditable="true">Have you uploaded a Clear photo of a printed on a paper document not older than 3 months with all corners visible?<br>
+Full name and home address are clearly visible?<br>
+Did you upload it in JPG format?</span>
+
+</div>
+
+
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- ASking about PWD -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('pWD').innerText)" ><u class="solid">How to WD</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="pWD" contenteditable="true">First, you must have at least 100$ to make a withdrawal.
+Then, if your phone number or email address is not verified, you need to verify them as soon as possible.
+After you request a withdrawal, you go to the Documents page and upload the needed documents. (documents are individual, they are different for each player).
+without uploading any problematic documents, you will have to wait for the approval of those documents for up to 3 working days. 
+As soon as they are approved, the first withdraw will be paid up to 4 working days.
+The future payments will be paid much quicker, up to 2 working days. :)</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- ASking about PWD -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('twoUsers').innerText)" ><u class="color">Different person CC</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="twoUsers" contenteditable="true">If you wish to use the CC (Credit Card) of another person not registered on the account, the following information is requested:
+
+- Complete CC holder`s name
+- First 6 and 4 last digits of the CC: 000000 xxxxxx 0000
+- Credit card holder`s email
+- Credit Card holder`s phone number
+- Signature: MIGHT be the same as on ID
+- Copy of ID both sides
+- The CC holder must handwrite he gave the authorization the player to use this CC.
+
+The approval will be done by Risk & Fraud and/or Finance.
+we do not accept IDs or CCs with a blurry image, scanned,screenshot or incomplete. 
+Documents must be sent in JPEG ONLY.
+</span>
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('canadianWDlink').innerText)" >
+<u class="solid">Canadian WD (Links)</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="canadianWDlink" contenteditable="true">
+Name: Player Name
+Bank: Bank Name
+Swift: Swift Code for More Information: https://www.theswiftcodes.com/canada/
+IBAN: Account Number
+INST#: Institution Number for More Information: https://support.kraken.com/hc/en-us/articles/115012377707-Canadian-Financial-Institution-Numbers
+NCC: Branch Number
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('canadianWD').innerText)" >
+<u class="color">Canadian WD</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="canadianWD" contenteditable="true">
+Name: Player Name
+Bank: Bank Name
+Swift: Swift Code
+IBAN: Account Number
+INST#: Institution Number
+NCC: Branch Number
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('aussieWD').innerText)" >
+<u class="solid">Australian WD</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="aussieWD" contenteditable="true">
+Name: Player Name
+Bank: Bank Name
+Swift: Swift Code
+IBAN: Account Number
+CI Code: Clearing Code or BSB Number
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('aussieWDlink').innerText)" >
+<u class="color">Australian WD (Links)</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="aussieWDlink" contenteditable="true">
+Name: Player Name
+Bank: Bank Name
+Swift: Swift Code for More Information: https://www.theswiftcodes.com/australia/
+IBAN: Account Number
+CI Code: Clearing Code or BSB Number for More information: https://www.nab.com.au/contact-us/nab-bsbs
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('euroWD').innerText)" >
+<u class="solid">European WD</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="euroWD" contenteditable="true">
+Name:  Player Name
+Bank: Bank Name
+Swift: Swift Code
+IBAN: Account Number
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('wdPayment').innerText)" >
+<u class="color">When WD?</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="wdPayment" contenteditable="true">It takes up to 24 working hours ( 3 working days / 8 working hours per day ) to pay you the withdrawal from the day you sent the request. (not including weekends) Please be patient :)
+Remember, it is UP TO 24 working hours so it could be done quicker :)
+</span>
+
+</div>
+
+<!----------- Element
+----------------------------------------------------->
+
+<div class="container light">
+
+<div class="grid">
+<!-- When German comes! -->
+<i class="fa fa-times remove grid-element"></i>
+<h3 class="grid-element" onclick="copyToClip(document.getElementById('utilityBill').innerText)" >
+<u class="solid">Utility bill document</u></h3>
+<a class="fa fa-search grid-element" href="#"></a>
+</div>
+
+<span id="utilityBill" contenteditable="true">
+You have to upload a clear photo of a printed on a paper document (utility bill) that is not older than 3 months with all 4 corners visible (full document).
+It must contain your full name and your home address.
+The photo needs to be clear and readable.
+The document must be in JPEG/JPG format (the standard photo format).
+</span>
+
+</div>
+<!--End Of Comments for this section-------------------------------------------------------------->
+</div>
+<div class="bottom"></div>
+</div>
+</div>
+</body>
+</html>
+
+

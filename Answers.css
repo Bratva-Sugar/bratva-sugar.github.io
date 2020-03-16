@@ -1,0 +1,351 @@
+
+* {
+ margin: 0;
+ padding: 0;
+  
+}
+
+body {
+
+
+width:100%;
+margin:0;
+padding:0;
+position:absolute;
+font-size:13px;
+font-family: 'ComfortaaRegular';
+
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  body {
+    width:99.9%;
+  }
+}
+
+
+/*-------------------------------------
+--------------Buttons----------------*/
+
+.buttons-container { 
+	background: #151515;
+	margin:auto; 
+}
+#buttons {
+    display: grid;
+    grid-template-areas: 'status bonus emails translate finance';
+}
+.heading {
+	text-align: center;
+	cursor:pointer;
+	padding: 7px 30px;   
+	align-items: center;
+	justify-content: center;
+	margin: 1px;
+	background: #3A343C;
+	border-top: 1px solid #353535;
+	box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+	transition: all 0.5s;
+}
+
+.heading i {
+	display: inline-block;
+	color: gray;
+	text-decoration: none;
+	font-size: 34px;
+	transition: all 0.5s;
+}
+
+.heading:hover {
+	background: #202020;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.8);
+}
+
+#sButton {grid-area: status;}
+
+#sButton.active {
+	background: #151515;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.8);
+ }
+
+#sButton i:hover {
+	color: rgb(255, 191, 0);
+	text-shadow: 0 0 15px rgba(255, 191, 0,0.5);
+}
+
+#sButton.active i {
+  	color: rgb(255, 191, 0);
+  	text-shadow: 0 0 15px rgba(255, 191, 0,0.5);
+}
+
+#bButton {grid-area: bonus;}
+
+#bButton.active {
+	background: #151515;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.8);
+  }
+
+#bButton i:hover {
+  	color: rgb(242, 242, 13);
+  	text-shadow: 0 0 15px rgba(242, 242, 13,0.5);
+}
+
+#bButton.active i {
+  	color: rgb(242, 242, 13);
+  	text-shadow: 0 0 15px rgba(242, 242, 13,0.5);
+}
+
+#eButton { grid-area: emails;}
+
+#eButton.active {
+	background: #151515;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.8);
+  }
+
+#eButton i:hover {
+	color: rgb(13, 128, 242);
+	text-shadow: 0 0 15px rgba(13, 128, 242,0.5);
+}
+
+#eButton.active i {
+	color: rgb(13, 128, 242);
+	text-shadow: 0 0 15px rgba(13, 128, 242,0.5);
+}
+
+#tButton {grid-area: translate;}
+
+#tButton.active {
+	background: #151515;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.8);
+  }
+
+#tButton i:hover {
+	color: rgb(13, 242, 13);
+	text-shadow: 0 0 15px rgba(13, 242, 13,0.5);
+}
+
+#tButton.active i {
+	color: rgb(13, 242, 13);
+	text-shadow: 0 0 15px rgba(13, 242, 13,0.5);
+}
+
+#fButton {grid-area: finance;}
+
+#fButton.active {
+	background: #151515;
+	border-top: none;
+	border-bottom: 1px solid #252525;
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.8);
+  }
+
+#fButton i:hover {
+	color: rgb(230, 25, 25);
+	text-shadow: 0 0 15px rgba(230, 25, 25,0.5);
+}
+
+#fButton.active i {
+	color: rgb(230, 25, 25);
+	text-shadow: 0 0 15px rgba(230, 25, 25,0.5);
+}
+
+/*---------------------------------------
+---------- Below Buttons Bar ---------------*/
+
+#blank {
+	display:none;
+	position:absolute;
+	background-color:#202020;;
+	width:100%;
+	height:25px;
+	padding-top: 3px;
+	color:black;
+	text-align: center;
+	font-size: 19px;
+	background: #151515;
+	margin-top: 1px;
+}
+
+/*------------------------------------------
+-------------List customization ------------*/
+
+.grid {
+	display:grid;
+	grid-template-areas: "close title magnify";
+	grid-template-columns:5% 90% 5%;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.grid-element {}
+
+.grid i {
+	grid-area:close;
+	position:absolute;
+	border-right: 1px solid rgba(255,255,255,0.2);
+	position:relative;
+	padding:5px;
+	font-size: 15px;
+	cursor:pointer;
+	color: rgba(198, 57, 57);
+	text-align: center;
+}
+
+.grid h3 {
+	grid-area:title;
+	background-color:rgb(0,0,0,0.3);
+	position: relative;
+	margin:0;
+	padding-left:5px;
+	padding-top: 5px;
+	transition-duration: 0.2s;
+	border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+
+.grid a {
+	grid-area:magnify;
+	position:relative;
+	color:rgb(255,255,255,0.7); 
+	text-decoration: none; 
+	font-size: 14px;
+	padding:6px;
+	text-align: center;
+}
+
+.grid a:visited {color:rgb(255,255,255,0.7);}
+
+.grid h3:hover {background-color:rgb(51, 51, 51, 0.5);}
+
+.grid i:hover { background-color:rgb(51, 51, 51, 0.5); color:rgb(255,255,255);}
+
+.grid a:hover {background-color:rgb(255, 255, 255, 0.7); color:rgb(0,0,0);}
+
+h3:hover {transform: translateX(2px);}
+
+h3:active {transform: translateY(3px);}
+
+.messages {
+	display:none;
+	position:absolute;
+	width:100%;
+	top:75px;
+	margin-top:7px;
+}
+
+span {
+	display:none;
+	position:absolute;
+	left:5%;
+	background-color:rgb(255,255,255);
+	width:80%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 10px;
+	z-index: 1;
+	border-radius:5px;
+	font-weight: bold;
+	transform: translateY(-15px);
+} 
+
+#sTicket {display:none;}
+
+#bMessages .color {color:rgb(191, 191, 64);}
+
+#bMessages .container .color:hover {color:rgb(242, 242, 13);}
+
+#sMessages .color {color:rgb(191, 159, 64);}
+
+#sMessages .container .color:hover {color:rgb(255, 191, 0);}
+
+#tMessages .color {color:rgb(89, 166, 89);}
+
+#tMessages .container .color:hover {color:rgb(92, 214, 92);}
+
+#fMessages .color {color:rgb(179, 77, 77);}
+
+#fMessages .container .color:hover {color:rgb(242, 95, 95);}
+
+#eMessages .color {color:rgb(64, 64, 191);}
+
+#eMessages .container .color:hover {color:rgb(13, 128, 242);}
+
+.solid {
+	color:rgb(191, 191, 191);
+	text-decoration: none;
+}
+
+.color { text-decoration: none; }
+
+
+.messages .container .solid:hover {color:rgb(255,255,255);}
+
+#example {display:none;}
+
+.add {
+	cursor: pointer;
+	background-color: #000000;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+	position: relative;
+	margin:3px 0 0 5px;
+	width:99.5%;
+	color:white;
+	font-size:13px;
+}
+
+.add i {
+	transform: rotate(45deg);
+	font-size: 9px;
+	font-weight:bold;
+}
+
+.bottom {
+	display: none;
+	margin:2px 2px 0 2px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 2px;
+	background-color: #000000;
+	border: none;
+	position: relative;
+	width:99.5%;
+	height:5px;
+ }
+
+
+
+i.newComment {
+	display:none;
+	transform: rotate(45deg);
+}
+
+#snackBar {
+	display: none;
+	position:fixed;
+	bottom:70px;
+	left:50%;
+	width: auto;
+	height:auto;
+	text-align:center;
+	color:black;
+	background-color: #FFF;
+	z-index: 1;
+	transform: translateX(-50%);
+	font-weight:bold;
+	padding: 10px;
+	border-radius: 16px;
+}
+
+#snackBar.active {display:block;}
