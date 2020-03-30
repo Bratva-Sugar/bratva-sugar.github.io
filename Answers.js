@@ -119,7 +119,7 @@ $(this).removeClass("tooltip");
 });	*/
 
 $(document).ready(function(){
-	$("#welcomen").load("Status/1.txt");
+	$("#welcomen").load("1.txt");
 });
 
 /*-----------------------------------------------------Buttons---------------------------------------*/
