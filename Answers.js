@@ -1,10 +1,10 @@
 
 
-function copyToClip(str) {
-	function listener(e) {
-		e.clipboardData.setData("text/html", str);
-		e.clipboardData.setData("text/plain", str);
-		e.preventDefault();
+function copyToClip(string) {
+	function listener(event) {
+		event.clipboardData.setData("text/html", str);
+		event.clipboardData.setData("text/plain", str);
+		event.preventDefault();
 	}
 	document.addEventListener("copy", listener);
 	document.execCommand("copy");
