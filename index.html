@@ -1,0 +1,254 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<title>Casino-Comments</title>
+		<link rel="shortcut icon" type="image/png" href="favi.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+		<style>
+			
+			body {
+
+				background-image: url("casino.jpg");
+				background-repeat: no-repeat;
+  				background-position: right top;
+  				background-size: auto;
+  				font-family: 'Source Sans Pro', sans-serif;
+  				
+  			}
+
+  			body::after {
+
+  				content: "";
+  				background-color: black;
+  				opacity: 0.6;
+  				top: 0;
+  				left: 0;
+  				bottom: 0;
+  				right: 0;
+  				position: absolute;
+  				z-index: -1;   
+
+  			}
+
+			/* .YB {
+
+				position:fixed;
+				top:0;
+				right:0;
+				width:31.9%;
+				height:10%;
+			*/
+
+			/*.chat {
+
+				
+				border:1px black solid;
+				position:absolute;
+				top:-2px;
+				left:0;
+				width:68%;
+				height:100%;
+
+			}*/
+
+			#answers {
+				
+				
+				background-color: #fff5cc);
+				position:fixed;
+				top:1rem;
+				left:0;
+				height:100%;
+				z-index: 1;
+			}
+			
+
+			#ansiframe {
+
+				width:100vw;
+				position: fixed;
+				top:0;
+				left:0;
+				height:100vh;
+			}
+
+			
+
+			#hover-bar {
+
+				position: fixed;
+				bottom:0;
+				left:0;
+				opacity:0.5;
+				width:100vw;
+				height:1.5rem;
+				background-color: black;
+
+			}
+
+			#hover-text{
+
+				position:fixed;
+				left:50%;
+				transform: translateX(-50%);
+				text-align:center;
+				font-size:17px;
+				color:white;
+			}
+
+		
+			
+
+			#table {
+
+				display:none;
+				height:35vh;
+				width:90vw;
+				position: fixed;
+				bottom:1.5rem;
+				margin:auto;
+				
+
+			}
+			
+			#hover-bar:hover + #table {
+
+				display:block;
+				transition: 0.4s;
+				z-index:0;
+			}
+			
+			
+			.topnav {
+			
+				font-family: 'Source Sans Pro', sans-serif;
+				position:fixed;
+				top:0;
+				left:0;
+				width:100vw;
+
+			}
+			
+			.topnav a {
+			
+				position:absolute;
+				background-color: #555;
+				opacity:0.3;
+  				color: white;
+  				padding: 12px 0;
+  				font-size: 1.2rem;
+				text-decoration: none;
+				text-align: center;
+				outline: 1px solid black;
+        		outline-offset: -1px;
+				width:50vw;	
+				height:1rem;
+			
+			}
+
+			#chat {left:0;}
+
+			#ticket {right:0;}
+
+			.topnav a.active {
+				
+				background-color: #4E4950;
+			    color:white;
+			    opacity:1;
+			    border-bottom: 2px solid white;
+			    
+			}
+			
+			.topnav a:hover {background-color: #4E4950; color:color; opacity:1;}
+
+			
+
+
+			.resp {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				border: 0;
+
+			}
+			
+			.topnav i {
+
+				padding:0 5px;
+			}
+
+
+			::-webkit-scrollbar {
+
+			display:none;
+			}	
+
+			
+
+		</style>
+
+
+		
+
+
+		<!--<div class="YB">
+		
+			<Iframe id="yb" class="resp" src="Link-website.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></Iframe>
+
+		</div>-->
+
+		<!-- 
+
+		<div id="answers">
+		
+			<div class="topnav">
+			
+				<a id="chat" class="active" href="Answers.html" target="ia"><i class="fas fa-comments"></i>Chat</a>
+						
+				<a id="ticket" href="tickets.html" target="ia"><i class="fas fa-ticket-alt"></i>Ticket</a>
+					
+			</div>
+
+		</div> -->
+
+		<div id="ansiframe">
+			
+				<iframe name="ia" class="resp" src="Answers.html" frameborder=""></iframe>
+				
+		</div>
+
+		<div id="hover-bar"><span id="hover-text">Hover</span></div>
+
+		<div id="table">
+				
+				<iframe class="resp" src="Table.html" frameborder=""></iframe>
+
+		</div>
+
+		
+		<script>
+
+			$(document).ready(function(){
+			
+			$("a").click(function(){
+			
+				$(this).addClass("active");
+			
+				$("a").not(this).removeClass("active");
+			
+			});
+			
+			});
+
+
+
+		</script>
+
+
+	</body>
+</html>
